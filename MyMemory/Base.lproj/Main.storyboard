@@ -64,6 +64,11 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="Xhh-0y-0h9" secondAttribute="trailing" constant="70" id="n9C-hI-bSa"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="Xhh-0y-0h9" id="aMj-77-Cxp"/>
+                                    <outlet property="regdate" destination="yZY-rk-tzl" id="e4c-sM-90h"/>
+                                    <outlet property="subject" destination="Pjk-n0-Srl" id="m6V-XB-vaE"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="znq-aR-qq1" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="414" height="80"/>
@@ -121,6 +126,12 @@
                                         <constraint firstAttribute="trailing" secondItem="3Mo-xc-9oR" secondAttribute="trailing" id="xlT-Hb-dg8"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="PKu-fw-mqN" id="GUJ-4y-4e4"/>
+                                    <outlet property="img" destination="hxO-ad-RFA" id="yjq-de-s0d"/>
+                                    <outlet property="regdate" destination="3Mo-xc-9oR" id="UXd-ta-UvI"/>
+                                    <outlet property="subject" destination="shS-FU-oFe" id="nXe-pk-LDw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -205,7 +216,7 @@
         <!--상세 화면-->
         <scene sceneID="XDp-H4-MdN">
             <objects>
-                <viewController title="상세 화면" id="f9A-VK-ynh" sceneMemberID="viewController">
+                <viewController title="상세 화면" id="f9A-VK-ynh" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yme-lk-alk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,6 +258,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="usU-Mq-m8y"/>
+                    <connections>
+                        <outlet property="contents" destination="7IS-9n-MuZ" id="nSd-1w-UPj"/>
+                        <outlet property="img" destination="fT2-D8-HGl" id="xS7-yF-GYm"/>
+                        <outlet property="subject" destination="NyL-qx-0Ep" id="vYl-yS-rLd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JqW-ZU-dSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
