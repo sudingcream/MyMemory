@@ -157,13 +157,13 @@
         <!--메모 작성-->
         <scene sceneID="EfI-Ye-81a">
             <objects>
-                <viewController id="MQg-qZ-WIn" customClass="MemoFormVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteVC" id="MQg-qZ-WIn" customClass="MemoFormVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0Y-UL-YQD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o04-3Q-0mZ">
-                                <rect key="frame" x="16" y="64" width="382" height="250"/>
+                                <rect key="frame" x="16" y="20" width="382" height="250"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="dMQ-Tu-zt7"/>
@@ -173,7 +173,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nIr-lJ-58n">
-                                <rect key="frame" x="16" y="329" width="250" height="250"/>
+                                <rect key="frame" x="16" y="285" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="IYI-ZR-bkf"/>
                                     <constraint firstAttribute="height" constant="250" id="MjN-gY-tfC"/>
@@ -218,11 +218,11 @@
             <objects>
                 <viewController title="상세 화면" id="f9A-VK-ynh" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yme-lk-alk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyL-qx-0Ep">
-                                <rect key="frame" x="16" y="60" width="382" height="21"/>
+                                <rect key="frame" x="16" y="16" width="382" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="yVx-5Y-QXb"/>
                                 </constraints>
@@ -231,14 +231,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fT2-D8-HGl" userLabel="상세 화면의 이미지 뷰">
-                                <rect key="frame" x="16" y="136.66666666666663" width="250" height="250"/>
+                                <rect key="frame" x="16" y="92.666666666666686" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" placeholder="YES" id="0SF-Yb-jDd"/>
                                     <constraint firstAttribute="width" constant="250" id="N7P-7T-gIa"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IS-9n-MuZ">
-                                <rect key="frame" x="16" y="101" width="382" height="15.666666666666671"/>
+                                <rect key="frame" x="16" y="56.999999999999993" width="382" height="15.666666666666664"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -277,12 +277,45 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="0AH-Ey-lrO" kind="relationship" relationship="rootViewController" id="X8s-pI-Vdj"/>
+                        <segue destination="xyL-ww-BGR" kind="relationship" relationship="rootViewController" id="TTa-xC-smB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ahw-KH-gGX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="19"/>
+            <point key="canvasLocation" x="-890" y="19"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="hYI-Cq-Qxr">
+            <objects>
+                <viewController id="xyL-ww-BGR" customClass="MainViewController" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zak-Fb-yJo" customClass="CalendarView" customModule="MyMemory" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78E-Ba-Mrv" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="470"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="470" id="O1R-8a-nu4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CL2-Lu-RUb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="78E-Ba-Mrv" firstAttribute="leading" secondItem="CL2-Lu-RUb" secondAttribute="leading" id="1KV-O7-oxq"/>
+                            <constraint firstItem="78E-Ba-Mrv" firstAttribute="top" secondItem="CL2-Lu-RUb" secondAttribute="top" id="QIV-dw-U11"/>
+                            <constraint firstItem="78E-Ba-Mrv" firstAttribute="trailing" secondItem="CL2-Lu-RUb" secondAttribute="trailing" id="i2q-s5-yiS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="45H-GY-ZPu"/>
+                    <connections>
+                        <outlet property="calendar" destination="78E-Ba-Mrv" id="Pw8-Kp-NSL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zM5-On-To4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171.01449275362319" y="18.75"/>
         </scene>
     </scenes>
     <resources>
