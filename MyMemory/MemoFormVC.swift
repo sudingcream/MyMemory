@@ -83,6 +83,7 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         super.viewDidLoad()
         self.contents.delegate = self
         // Do any additional setup after loading the view.
+
     }
     
 

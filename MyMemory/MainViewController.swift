@@ -35,15 +35,20 @@ class MainViewController: UIViewController,FSCalendarDelegate {
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
-        guard let modalPresentView = self.storyboard?.instantiateViewController(identifier: "WriteVC") as? MemoFormVC else {return}
+        guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "WriteVC") else {
+            return
+        }
         
-        print("selected")
+        self.present(uvc,animated: true)
+        
+       // guard let modalPresentView = self.storyboard?.instantiateViewController(identifier: "WriteVC") as? MemoFormVC else {return}
+      
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-dd"
         let string = formatter.string(from: date)
         print("\(string)")
         
-        self.present(modalPresentView, animated: true, completion: nil)
+       // self.present(modalPresentView, animated: true, completion: nil)
       
     }
     
