@@ -8,7 +8,7 @@
 import UIKit
 import FSCalendar
 
-class MainViewController: UIViewController,FSCalendarDelegate {
+class MainViewController: UIViewController,FSCalendarDelegate, FSCalendarDataSource {
     
     @IBOutlet var calendar: FSCalendar!
     
@@ -16,7 +16,15 @@ class MainViewController: UIViewController,FSCalendarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         calendar.delegate = self
+        calendar.dataSource = self
         
+        view.addSubview(calendar)
+        
+        // 양 옆 흐릿 흐 릿~ 날짜 없애깅
+        calendar.appearance.headerMinimumDissolvedAlpha = 0.0
+
+        calendar.locale = Locale(identifier: "ko_KR")
+
         // 선택한 날짜 칼라
         calendar.appearance.selectionColor = UIColor(red: 230/255, green: 180/255, blue: 193/255, alpha: 1.0)
         // 오늘 날짜
@@ -31,10 +39,11 @@ class MainViewController: UIViewController,FSCalendarDelegate {
         calendar.appearance.headerTitleColor = .systemPurple
         
     }
+
     
-    
+    // 날짜 클릭하면 호출되는 메소드
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
+
         guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "WriteVC") else {
             return
         }
@@ -51,6 +60,8 @@ class MainViewController: UIViewController,FSCalendarDelegate {
        // self.present(modalPresentView, animated: true, completion: nil)
       
     }
-    
+  
 
 }
+
+

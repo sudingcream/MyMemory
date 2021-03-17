@@ -152,7 +152,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSG-1i-aWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="547.82608695652175" y="18.75"/>
+            <point key="canvasLocation" x="632" y="19"/>
         </scene>
         <!--메모 작성-->
         <scene sceneID="EfI-Ye-81a">
@@ -211,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9t-mt-Msp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="19"/>
+            <point key="canvasLocation" x="1496" y="19"/>
         </scene>
         <!--상세 화면-->
         <scene sceneID="XDp-H4-MdN">
